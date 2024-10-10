@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6ca4c8bf-b660-4a05-a7b9-c2b25996d3cb</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+	  <!-->PackageReference Include="Microsoft.AspNet.WebPages" Version="3.3.0" /-->
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Knights.Challenge.Domain\Knights.Challenge.Domain.csproj" />
+    <ProjectReference Include="..\Knights.Challenge.Repository\Knights.Challenge.Repository.csproj" />
+    <ProjectReference Include="..\Knights.Challenge.Service\Knights.Challenge.Service.csproj" />
+  </ItemGroup>
+
+</Project>

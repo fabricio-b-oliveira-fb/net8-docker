@@ -1,0 +1,54 @@
+version: "3.1"
+
+services:
+
+    knights-challenge-api:
+       image: knights/knightschallenge:latest
+       container_name: knights-challenge-api
+       build:
+           context: ../src
+           dockerfile: Knights.Challenge.API/Dockerfile
+       restart: always
+       ports:
+         - 8080:8080
+       networks:
+         - knights-network
+       environment:
+           ASPNETCORE_ENVIRONMENT: Development
+           ASPNETCORE_URLS: http://+:8080
+           KnightsChallengeDataBase__ConnectionString: "mongodb://root:123456@mongo-knights-challenge-server:27017/"
+           KnightsChallengeDataBase__DatabaseName: "knightschallenge"
+           KnightsChallengeDataBase__KnightsCollectionName: "knights"
+           LC_ALL: "en_US.UTF-8"
+           LANG: "en_US.UTF-8"    
+       depends_on:
+         - mongo-knights-challenge-server
+
+    mongo-knights-challenge-server:
+      image: mongo
+      restart: always
+      ports:
+        - 27017:27017
+      networks:
+        - knights-network
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: 123456
+
+    mongo-knights-challenge-client:
+      image: mongo-express
+      restart: always
+      ports:
+        - 8081:8081
+      networks:
+        - knights-network
+      environment:
+        ME_CONFIG_MONGODB_ADMINUSERNAME: root
+        ME_CONFIG_MONGODB_ADMINPASSWORD: 123456
+        ME_CONFIG_MONGODB_URL: mongodb://root:123456@mongo-knights-challenge-server:27017/
+        ME_CONFIG_BASICAUTH: false 
+
+networks:
+  knights-network:
+    driver:
+      bridge
