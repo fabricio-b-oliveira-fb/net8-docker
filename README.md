@@ -36,4 +36,4 @@
 
 ---
 
-@@@
+Parte backend - Knight Challenge project. # Ler os arquivos de instrução: ./README.md, Knights.Challenge/ADRs.md, Knights.Challenge/JSON-KNIGHTS-EXAMPLES.md
