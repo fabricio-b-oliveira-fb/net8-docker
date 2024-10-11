@@ -14,11 +14,11 @@ The calculations are based on the age, physical and personal characteristics pro
 
 | ADR Id      | Description                                                                              | Status    |
 |-------------|------------------------------------------------------------------------------------------|-----------|
-| adr-001     | Vue.js               : Frontend applications                                             | Approved  |
+| adr-001     | Vue.js               : Frontend application                                              | Approved  |
 | adr-002     | C# + .net8           : Backend services (API)                                            | Approved  |
 | adr-003     | MongoDB              : Database (NoSql)                                                  | Approved  |
 | adr-004     | Docker               : Containerized services (script for building and image generation) | Approved  |
-| adr-005     | EKS - AWS            : Kubernetes for production deployment                              | Approved  |
+| adr-005     | EKS - AWS            : Kubernetes - production deployment                                | Approved  |
 | adr-006     | ELK Stack            : Observability                                                     | Approved  |
 | adr-007     | Prometheus           : Monitoring                                                        | Approved  |
 | adr-008     | Grafana              : Monitoring (graphic app - chart - feed from Prometheus services   | Approved  |
@@ -27,7 +27,7 @@ The calculations are based on the age, physical and personal characteristics pro
 | adr-011     | Redis                : Services (API) caching                                            | Approved  |
 | adr-012     | Azure devOps         : CI/CD - application deployment                                    | Approved  |
 | adr-013     | Software Architecture: Three tier due to controlled complexity                           | Approved  |
-| adr-014     | Codebaese monitoring : SonarQube                                                         | Approved  |
+| adr-014     | Codebase monitoring  : SonarQube                                                         | Approved  |
 
 ## Diagrams
 
