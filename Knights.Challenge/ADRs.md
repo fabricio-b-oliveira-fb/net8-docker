@@ -24,8 +24,10 @@ The calculations are based on the age, physical and personal characteristics pro
 | adr-008     | Grafana              : Monitoring (graphic app - chart - feed from Prometheus services   | Approved  |
 | adr-009     | Akamai(CDN)          : Increases services security and performance                       | Approved  |
 | adr-010     | Api Security         : token-based authentication {Authentication and Authorization}     | Approved  |
-| adr-011     | Azure devOps         : CI/CD - application deployment                                    | Approved  |
-| adr-012     | Codebaese monitoring : SonarQube                                                         | Approved  |
+| adr-011     | Redis                : Services (API) caching                                            | Approved  |
+| adr-012     | Azure devOps         : CI/CD - application deployment                                    | Approved  |
+| adr-013     | Software Architecture: Three tier due to controlled complexity                           | Approved  |
+| adr-014     | Codebaese monitoring : SonarQube                                                         | Approved  |
 
 ## Diagrams
 
